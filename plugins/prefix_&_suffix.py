@@ -13,7 +13,7 @@ from helper.database import db
 @Client.on_message(filters.private & filters.command('set_prefix'))
 async def add_prefix(client, message):
     if len(message.command) == 1:
-        return await message.reply_text("**__Give The Prefix__\n\nExᴀᴍᴩʟᴇ:- `/set_prefix @Rkn_Bots`**")
+        return await message.reply_text("**__Give The Prefix__\n\nExᴀᴍᴩʟᴇ:- `/set_prefix @Ordinary_Bots`**")
     prefix = message.text.split(" ", 1)[1]
     RknDev = await message.reply_text("Please Wait ...", reply_to_message_id=message.id)
     await db.set_prefix(message.from_user.id, prefix)
@@ -41,7 +41,7 @@ async def see_prefix(client, message):
 @Client.on_message(filters.private & filters.command('set_suffix'))
 async def add_suffix(client, message):
     if len(message.command) == 1:
-        return await message.reply_text("**__Give The Suffix__\n\nExᴀᴍᴩʟᴇ:- `/set_suffix @Rkn_Bots`**")
+        return await message.reply_text("**__Give The Suffix__\n\nExᴀᴍᴩʟᴇ:- `/set_suffix @Ordinary_Bots`**")
     suffix = message.text.split(" ", 1)[1]
     RknDev = await message.reply_text("Please Wait ...", reply_to_message_id=message.id)
     await db.set_suffix(message.from_user.id, suffix)

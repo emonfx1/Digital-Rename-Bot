@@ -10,20 +10,20 @@ id_pattern = re.compile(r'^.\d+$')
 
 class Config(object):
     # pyro client config
-    API_ID = os.environ.get("API_ID", "")
-    API_HASH = os.environ.get("API_HASH", "")
+    API_ID = os.environ.get("API_ID", "22037380")
+    API_HASH = os.environ.get("API_HASH", "f6140ecd6cb975865bffc1c0d6ea2ef7")
     BOT_TOKEN = os.environ.get("BOT_TOKEN", "") 
 
     # premium account string session required 😢 
-    STRING_SESSION = os.environ.get("STRING_SESSION", "")
+    STRING_SESSION = os.environ.get("STRING_SESSION", "1BVtsOL8BuxNp_4ZG7p44-LYH24TFHuxFZt5PAQrxeAKSe1w_SEOiDdooOKhW85uqmHgtg4_Uy3CAwP4LOWNKJyASjfwU0MCBvQsTQwrYDGmwGMhacxfFEIl8yKudntSjmeKG2nXzM2zKRiVgz8PptjBO19XOirgj8jTyLKp8M3ltpJsJFtUHgTdwcdwME-dMM0YtAl4f4j-zJ5FLNIT7wkdVyp8r_sMEFRoLi605OCl6g-joUHO9TjzbG_OVquZyWLuYP2e3roeffZ1ehI-SRfl3dY_2C1TnpMbNxhGeXzK5OFET4jLkyPWntqSYIoxqRO0EnUzVpcsjk3HfP6QrXjrBtFZrx3I=")
     
     # database config
     DB_NAME = os.environ.get("DB_NAME","Digital_Rename_Bot")     
-    DB_URL = os.environ.get("DB_URL","")
+    DB_URL = os.environ.get("DB_URL","mongodb+srv://emonfx:2FNeyugOXUInZ3vQ@emonfx.cvbeelh.mongodb.net/?retryWrites=true&w=majority&appName=EmonFx")
  
     # other configs
     RKN_PIC = os.environ.get("RKN_PIC", "https://telegra.ph/file/99c77d0d2db3b42615139.jpg")
-    ADMIN = [int(admin) if id_pattern.search(admin) else admin for admin in os.environ.get('ADMIN', '5559075560 6311633243').split()]
+    ADMIN = [int(admin) if id_pattern.search(admin) else admin for admin in os.environ.get('ADMIN', '6311633243').split()]
     FORCE_SUB = os.environ.get("FORCE_SUB", "Ordinary_Bots") 
     LOG_CHANNEL = int(os.environ.get("LOG_CHANNEL", "-1002039026711"))
 
